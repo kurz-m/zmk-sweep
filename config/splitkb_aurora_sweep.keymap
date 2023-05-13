@@ -41,84 +41,24 @@ behaviors {
 };
 
 / {
-
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
-         combo_tab {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp TAB>;
-        };
-
-            combo_ralt {
-            timeout-ms = <50>;
-            key-positions = <17 16>;
-            bindings = <&kp RALT>;
-        };
-
-                    combo_lalt {
-            timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp LALT>;
-        };
-
-                           combo_lgui {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LGUI>;
-        };
-
-
-       combo_rgui {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp RGUI>;
-        };
-
-
-
-    };
-
         keymap {
                 compatible = "zmk,keymap";
 
             default_layer {
         bindings = <
-     //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-     //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  ;       │
          &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y     &kp SEMICOLON
-     //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-     //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
          &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O
-     //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼─────────────────────┼────────────┼──────────┤
-     //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │        _ /          │    ! .     │     │
-        &kp Z       &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &tp UNDERSCORE SLASH &tp EXCL DOT   &mt LSFT RET
-     //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼─────────────────────┴────────────┴──────────╯
-                                          &mo 1     &sk LSHIFT      &sk RCTRL    &to 1
-     //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+         &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &tp UNDERSCORE SLASH &tp EXCL DOT   &mt LSFT RET
+                                          &mo 1      &sk LSHIFT     &sk RCTRL  &to 1
         >;
         };
 
             left_layer {
         bindings = <
-     //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-     //│  ESC     │  @       │  #       │  $       │  %       │   │  ^       │  &       │  *       │  ~       │  BKSP    │
         &kp ESC     &kp AT    &kp POUND  &kp DOLLAR  &kp PRCNT     &kp CARET  &kp AMPS    &kp STAR   &kp TILDE  &kp BSPC
-     //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-     //│  TAB     │  =       │  "       │  '       │  `       │   │  \       │  {       │  }       │  |       │  ENTER   │
         &kp TAB    &kp EQUAL    &kp DQT   &kp SQT    &kp GRAVE      &kp BSLH   &kp LBRC   &kp RBRC   &kp PIPE   &kp ENTER
-     //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-     //│  ~       │  X       │  C       │  D       │  V       │   │  [       │  (       │   )      │   ]      │ ENTER    │
         &kp TILDE  &trans      &trans     &trans     &trans         &kp LBKT   &kp LPRN   &kp RPRN   &kp RBKT  &to 3
-     //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &to 0    &sk LSHIFT      &sk RALT  &to 2
-     //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
         >;
         };
 
