@@ -16,6 +16,15 @@
 
 / {
     behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
         td: tapdance {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
@@ -82,9 +91,9 @@
 
         bindings = <
         &kp Q &kp W &kp F &kp P &kp B                      &kp J &kp L  &kp U    &kp Y   &kp SEMICOLON
-        &kp A &kp R &kp S &kp T &kp G                      &kp M &kp N &kp E &kp I &kp O
-        &kp Z &kp X &kp C &kp D &kp V                      &kp M &kp H  &td UNDERSCORE SLASH &kp DOT &mt LSFT RET
-                    &kp SPACE  &sk LSHIFT                  &sk RCTRL &to 1
+        &kp A &kp R &hm LALT S &hm LGUI T &kp G            &kp M &hm RGUI N &hm RALT E &kp I &kp O
+        &kp Z &kp X &kp C &kp D &kp V                      &kp M &kp H  &td UNDERSCORE SLASH &td EXCL DOT &kp COMMA
+                &mt LC(LS(LALT)) SPACE  &sk LSHIFT         &sk RCTRL &to 1
         >;
         };
 
