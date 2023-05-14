@@ -83,17 +83,20 @@
             compatible = "zmk,keymap";
 
             default_layer {
-    // --------------------------------------------------------------------------------------------------------------
-    // |    Q    |    W    |    F    |    P    |    B    |        |    J    |    L    |    U    |    Y    |    ;    |
-    // |    A    |    R    |    S    |    T    |    G    |        |    M    |    N    |    E    |    I    |    O    |
-    // |    Z    |    X    |    C    |    D    |    V    |        |    K    |    H    |    ,    |    .    |    RET  |
-    //                               |   MEH   |  LSHIFT |        |  SPACE  |   TAB   |
-
         bindings = <
-        &kp Q &kp W &kp F &kp P &kp B                      &kp J &kp L  &kp U    &kp Y   &kp SEMICOLON
-        &kp A &kp R &hm LALT S &hm LGUI T &kp G            &kp M &hm RGUI N &hm RALT E &kp I &kp O
-        &kp Z &kp X &kp C &kp D &kp V                      &kp K &kp H  &td UNDERSCORE SLASH &td EXCL COMMA &kp DOT
-                &mt LC(LS(LALT)) SPACE  &sk LSHIFT         &sk RCTRL &to 1
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬────────────────────┬──────────────┬───────────────╮
+        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │         U          │  Y           │       ;       │
+            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L             &kp U         &kp Y          &kp SEMICOLON
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────────────┼──────────────┼───────────────┤
+        //│  A       │  R       │  ALT  S  │  GUI  T  │  G       │   │  M       │  GUI  N  │       ALT  E       │  I           │     O         │
+            &kp A      &kp R     &hm LALT S &hm LGUI T  &kp G          &kp M     &hm RGUI N       &hm RALT E      &kp I             &kp O
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────────────┼──────────────┼───────────────┤
+        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │      _ /           │    !  ,  <   │      . >      │
+            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &td UNDERSCORE SLASH &td EXCL COMMA     &kp DOT
+        //╰──────────┴──────────┴──────────┴──────────┼──────────┤   ├──────────┼──────────┼────────────────────┴──────────────┴───────────────╯
+        //                      │          MEH        │  SHIFT   │   │  Control │ Layer 1 │
+                                &mt LC(LS(LALT)) SPACE &sk LSHIFT      &sk RCTRL   &to 1
+        //                      ╰─────────────────────┴──────────╯   ╰──────────┴──────────╯
         >;
         };
 
