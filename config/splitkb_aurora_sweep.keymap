@@ -86,13 +86,13 @@
     // --------------------------------------------------------------------------------------------------------------
     // |    Q    |    W    |    F    |    P    |    B    |        |    J    |    L    |    U    |    Y    |    ;    |
     // |    A    |    R    |    S    |    T    |    G    |        |    M    |    N    |    E    |    I    |    O    |
-    // |    Z    |    X    |    C    |    D    |    V    |        |    M    |    H    |    ,    |    .    |    RET  |
-    //                               |   GUI   |   DEL   |        |  SPACE  |   TAB   |
+    // |    Z    |    X    |    C    |    D    |    V    |        |    K    |    H    |    ,    |    .    |    RET  |
+    //                               |   MEH   |  LSHIFT |        |  SPACE  |   TAB   |
 
         bindings = <
         &kp Q &kp W &kp F &kp P &kp B                      &kp J &kp L  &kp U    &kp Y   &kp SEMICOLON
         &kp A &kp R &hm LALT S &hm LGUI T &kp G            &kp M &hm RGUI N &hm RALT E &kp I &kp O
-        &kp Z &kp X &kp C &kp D &kp V                      &kp K &kp H  &td UNDERSCORE SLASH &td EXCL DOT &kp COMMA
+        &kp Z &kp X &kp C &kp D &kp V                      &kp K &kp H  &td UNDERSCORE SLASH &td EXCL COMMA &kp DOT
                 &mt LC(LS(LALT)) SPACE  &sk LSHIFT         &sk RCTRL &to 1
         >;
         };
@@ -108,10 +108,10 @@
 
             right_layer {
         bindings = <
-        &kp ESC  &kp C_PP &kp UP  &kp C_NEXT  &kp LS(MINUS)                 &kp MINUS  &kp N7 &kp N8 &kp N9 &trans
+        &kp ESC  &kp C_PP &kp UP  &kp C_NEXT  &kp LS(MINUS)                &kp MINUS  &kp N7 &kp N8 &kp N9 &kp BSPC
         &kp TAB  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LS(EQUAL)             &kp EQUAL &kp N4  &kp N5  &kp N6   &kp ENTER
-        &to 4  &kp AMPS &kp SLASH &kp STAR &kp DOT                              &kp N0 &kp N1 &kp N2 &kp N3  &trans 
-                    &to 0 &sk LGUI  				&sk RALT  &to 2 
+        &to 4  &kp AMPS &kp SLASH &kp STAR &kp DOT                         &kp N0 &kp N1 &kp N2 &kp N3  &trans
+                                        &to 0 &sk LGUI                     &sk RALT  &to 2 
 
         >;
         };
