@@ -85,13 +85,13 @@
             default_layer {
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬────────────────────┬──────────────┬───────────────╮
-        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │         U          │  Y           │       ;       │
-            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L             &kp U         &kp Y          &kp SEMICOLON
+        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │         U          │      Y       │       ;       │
+            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L             &kp U             &kp Y      &kp SEMICOLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────────────┼──────────────┼───────────────┤
-        //│  A       │  R       │  ALT  S  │  GUI  T  │  G       │   │  M       │  GUI  N  │       ALT  E       │  I           │     O         │
-            &kp A      &kp R     &hm LALT S &hm LGUI T  &kp G          &kp M     &hm RGUI N       &hm RALT E      &kp I             &kp O
+        //│  A       │  R       │  ALT  S  │  GUI  T  │  G       │   │  M       │  GUI  N  │       ALT  E       │      I       │     O         │
+            &kp A      &kp R     &hm LALT S &hm LGUI T  &kp G          &kp M     &hm RGUI N       &hm RALT E          &kp I         &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────────────┼──────────────┼───────────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │      _ /           │    !  ,  <   │      . >      │
+        //│  Z       │  X       │  C       │    D     │    V     │   │    K     │    H     │      _ /           │    !  ,  <   │      . >      │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &td UNDERSCORE SLASH &td EXCL COMMA     &kp DOT
         //╰──────────┴──────────┴──────────┴──────────┼──────────┤   ├──────────┼──────────┼────────────────────┴──────────────┴───────────────╯
         //                      │          MEH        │  SHIFT   │   │  Control │ Layer 1 │
@@ -108,7 +108,9 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────┼──────────────┼───────────────┤
         //│   Tab    │    =     │    "     │     '    │    `     │   │    \     │    {     │     }      │       |      │     Enter     │
             &kp TAB   &kp EQUAL   &kp DQT    &kp SQT    &kp GRAVE      &kp BSLH   &kp LBRC    &kp RBRC       &kp PIPE       &kp ENTER
-        &kp TILDE &trans    &kp SLASH    &kp PRCNT     &trans         &kp LBKT   &kp LPRN   &kp RPRN   &kp RBKT  &to 3
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼────────────┼──────────────┼───────────────┤
+        //│    ~     │     X    │    /     │    %     │    V     │   │     [    │    (     │      )     │       ]      │    Layer 3    │
+            &kp TILDE   &trans    &kp SLASH  &kp PRCNT   &trans        &kp LBKT   &kp LPRN    &kp RPRN      &kp RBKT        &to 3
                     &to 0    &sk LSHIFT                         &sk RALT  &to 2
         >;
         };
