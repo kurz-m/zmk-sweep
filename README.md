@@ -18,6 +18,7 @@
 ```
 
 ## Symbol layer
+```
 ╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬────────────┬──────────────┬───────────────╮
 │  ESC     │    @     │    #     │    $     │     %    │   │    ^     │    &     │     *      │       -      │   Backspace   │
  &kp ESC      &kp AT   &kp POUND  &kp DOLLAR &kp PRCNT       &kp CARET  &kp AMPS    &kp STAR      &kp MINUS       &kp BSPC
@@ -31,3 +32,4 @@
                       │    Default layer    │  SHIFT   │   │   ALT    │ Layer 2 │
                                &to 0         &sk LSHIFT      &sk RALT    &to 2
                       ╰─────────────────────┴──────────╯   ╰──────────┴──────────╯
+```
