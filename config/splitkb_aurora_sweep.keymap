@@ -113,7 +113,7 @@
             &kp TILDE   &trans    &kp SLASH  &kp PRCNT   &trans        &kp LBKT   &kp LPRN    &kp RPRN      &kp RBKT        &to 3
         //╰──────────┴──────────┴──────────┴──────────┼──────────┤   ├──────────┼──────────┼────────────┴──────────────┴───────────────╯
         //                      │    Default layer    │  SHIFT   │   │   ALT    │ Layer 2 │
-                                         &to 0         &sk LSHIFT      &sk RALT    &to 2
+                                         &to 0         &sk LSHIFT      &sk LALT    &to 2
         //                      ╰─────────────────────┴──────────╯   ╰──────────┴──────────╯
         >;
         };
